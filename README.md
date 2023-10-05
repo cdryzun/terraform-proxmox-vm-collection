@@ -3,8 +3,6 @@
 
 > The Proxmox Virtual Environment terraform module is used to quickly clone virtual machine templates based on demand. This module uses the Telmate/proxmox provider for implementation.
 
-
-
 # Variables
 
 ## input
@@ -44,7 +42,7 @@ module "example-vm" {
       pool              = "devops"
       cores             = "2"
       memory            = "2048"
-      ip                = "192.168.8.8"
+      ip                = "192.168.8.9"
       ip_gw             = "192.168.8.1"
       dns               = "192.168.8.1"
       disk_size         = "40G"
@@ -55,9 +53,8 @@ module "example-vm" {
 }
 ```
 
-
-
 # Usage
+
 
 
 1. Generate SSH public and private keys.
@@ -83,5 +80,9 @@ module "example-vm" {
    
    terraform apply -auto-approve
    ```
+   ![2023-10-05 20.01.48](https://cdn.treesir.pub/images/2023/10/05/20231005202143.gif)
 
-   
+
+# instructions
+
+- https://registry.terraform.io/providers/Telmate/proxmox/latest/docs
